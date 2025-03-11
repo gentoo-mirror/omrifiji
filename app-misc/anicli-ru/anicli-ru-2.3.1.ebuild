@@ -3,11 +3,16 @@
 
 EAPI=8
 
-inherit git-r3 go-module
+inherit go-module
+
+SRC_TAG="v${PV}"
 
 DESCRIPTION="A cli to search and watch anime in russian"
 HOMEPAGE="https://github.com/OMRIFIJI/anicli-ru"
-EGIT_REPO_URI="https://github.com/OMRIFIJI/anicli-ru.git"
+SRC_URI="
+https://github.com/OMRIFIJI/anicli-ru/archive/refs/tags/${SRC_TAG}.tar.gz -> ${P}.tar.gz
+https://github.com/OMRIFIJI/anicli-ru/releases/download/v2.3.1/anicli-ru-deps.tar.xz -> ${P}-deps.tar.xz
+"
 
 LICENSE="GPL-3
 	MIT
@@ -22,8 +27,7 @@ RDEPEND="media-video/mpv
 	media-video/ffmpeg[libxml2]"
 
 src_unpack() {
-    git-r3_src_unpack
-    go-module_live_vendor
+	go-module_src_unpack
 }
 
 src_compile() {
