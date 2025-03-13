@@ -11,7 +11,7 @@ DESCRIPTION="A cli to search and watch anime in russian"
 HOMEPAGE="https://github.com/OMRIFIJI/anicli-ru"
 SRC_URI="
 https://github.com/OMRIFIJI/anicli-ru/archive/refs/tags/${SRC_TAG}.tar.gz -> ${P}.tar.gz
-https://github.com/OMRIFIJI/anicli-ru/releases/download/v2.3.1/anicli-ru-deps.tar.xz -> ${P}-deps.tar.xz
+https://github.com/OMRIFIJI/anicli-ru/releases/download/${SRC_TAG}/anicli-ru-deps.tar.xz -> ${P}-deps.tar.xz
 "
 
 LICENSE="GPL-3
