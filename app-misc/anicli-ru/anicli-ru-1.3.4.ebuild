@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-    ego build -o "${PN}" ./cmd/unix/main.go
+    ego build -o "${PN}" ./cmd/anicli-ru/main_unix.go
 }
 
 src_install() {
