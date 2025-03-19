@@ -24,7 +24,7 @@ IUSE=""
 
 BDEPEND=">=dev-lang/go-1.23.2"
 RDEPEND="media-video/mpv
-	media-video/ffmpeg[libxml2]"
+	media-video/ffmpeg[xml]"
 
 src_unpack() {
 	go-module_src_unpack
